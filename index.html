@@ -3,18 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Peppermint Boys Desktop — Centered Taskbar</title>
+<title>Peppermint OS</title>
 
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
 <style>
-
+  /* ============================================================
+   MODERN WINDOWS 95 THEME — FULL REWRITE
+   Sharp corners, beveled UI, flat colors, modern proportions
+   ============================================================ */
 html, body {
   font-size: 18px;
 }
 :root{
-  --bg-1:#c0c0c0;
-  --bg-2:#c0c0c0;
+  --bg-1:#3041ff;
+  --bg-2:#3041ff;
 
   --win95-light:#ffffff;
   --win95-mid:#c0c0c0;
@@ -28,7 +31,7 @@ html, body {
 
 }
 
-
+/* GLOBAL RESET */
 html,body{
   height:100%;
   margin:0;
@@ -38,11 +41,12 @@ html,body{
   overflow:hidden;
 }
 
-
+/* Remove all rounded corners globally */
 * {
   border-radius:0 !important;
 }
 
+/* Remove CRT + neon haze entirely */
 body::before,
 .neon-haze {
   display:none !important;
@@ -57,9 +61,18 @@ body::before,
   box-sizing:border-box;
   display:flex;
   gap:18px;
+  background:#a5a5a5
+  
 }
+/* #desktop {
+  background-image: url('img/your-desktop-wallpaper.jpg');
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat; 
+} */
 
-/* BRAND */
+
+/* BRAND (kept minimal + flat) */
 .brand-top {
   position:absolute;
   top:25px;
@@ -94,17 +107,18 @@ body::before,
   border:2px solid var(--win95-dark);
   border-right-color:var(--win95-light);
   border-bottom-color:var(--win95-light);
+  background:#6895ff
 }
 
 /* ============================================================
-   TASKBAR
+   TASKBAR — Modern Windows 95
    ============================================================ */
 
 .taskbar {
   position:absolute;
   left:0;
   right:0;
-  bottom:18px;
+  bottom:0px;
   height:60px;
 
   background:var(--win95-mid);
@@ -150,7 +164,7 @@ body::before,
 }
 
 /* ============================================================
-   APP ICON
+   APP ICONS — Modern Win95
    ============================================================ */
 
 .app-icon {
@@ -186,7 +200,7 @@ body::before,
 }
 
 /* ============================================================
-   WINDOWS
+   WINDOWS — Modern Win95
    ============================================================ */
 
 .window {
@@ -276,7 +290,7 @@ body::before,
 }
 
 /* ============================================================
-   CARDS / GRID / PHOTOS
+   CARDS / GRID / PHOTOS — Flattened Win95
    ============================================================ */
 
 .grid-3 {
@@ -343,7 +357,7 @@ body::before,
   <div class="desktop" id="desktop">
     <!-- Brand moved to top-left overlay -->
     <div class="brand-top" aria-hidden="false">
-      <div class="brand">PEPPERMINT BOYS</div>
+      <div class="brand">THE PEPPERMINT BOYS</div>
       <div class="brand-sub">Bigger than the beetles.</div>
     </div>
 
@@ -360,7 +374,7 @@ body::before,
           <div style="display:flex;gap:14px;align-items:center">
             
             <div>
-              <h2>Peppermint Boys</h2>
+              <h2>The Peppermint Boys</h2>
               <p style="margin:6px 0 0 0;color:#334155">We are visionaries.</p>
               <p style="margin:6px 0 0 0;color:#334155">Nobody can do what we do.</p>
               <p style="margin:6px 0 0 0;color:#334155">We are bigger than the beetles.</p>
@@ -658,4 +672,3 @@ body::before,
 </script>
 </body>
 </html>
-
