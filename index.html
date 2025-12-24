@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<link rel="icon" type="image/x-icon" href="PepBoysIco(4).png">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -72,8 +73,8 @@ body::before,
 
 .brand-top {
   position:absolute;
-  top:30px;
-  left:25px;
+  top:25px;
+  left:30px;
   z-index:999;
   display:flex;
   flex-direction:column;
@@ -104,7 +105,12 @@ body::before,
   border:2px solid var(--win95-dark);
   border-right-color:var(--win95-light);
   border-bottom-color:var(--win95-light);
-  background:#6895ff
+  background:#6895ff;
+  background-image: url('PepboysWallp.png');
+  background-size: cover;        /* fills the whole area */
+  background-position: center;   /* keeps it centered */
+  background-repeat: no-repeat;  /* no tiling */
+
 }
 
 /* ============================================================
@@ -351,6 +357,7 @@ img {
   
 
 </style>
+
 </head>
 <body>
   
@@ -364,6 +371,7 @@ img {
     </div>
 
     <div class="main" id="main">
+
       <!-- BIO app -->
       <div class="window hidden" id="win-bio" style="left:120px; top:80px;">
         <div class="titlebar" data-drag>
@@ -691,4 +699,3 @@ img {
 </script>
 </body>
 </html>
-
